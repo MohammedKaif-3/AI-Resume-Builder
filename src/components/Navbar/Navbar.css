@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  height: 70px;
+  background-color: #ffffff;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 30px;
+  width: auto;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #4e4e4e;
+  cursor: pointer;
+}
+
+.login-btn {
+  color: #1a91f0;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid #1a91f0;
+  padding: 8px 25px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins";
+  font-weight: 400;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #1a90f00e;
+}
+
+/* ✅ Minor spacing adjustments on small screens */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 8px 20px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .login-btn {
+    font-size: 14px;
+    padding: 6px 20px;
+  }
+}

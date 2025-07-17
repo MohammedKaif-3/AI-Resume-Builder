@@ -1,0 +1,48 @@
+.downloader-container{
+    width: 100%;
+    margin: 0 5px;
+    display: flex;
+    justify-content: end;
+}
+
+.downloader-button{
+    padding: 8px 11px;
+    font-size: 10px;
+    color: white;
+    font-family: "Poppins";
+    margin: 0 5px;
+    text-wrap: nowrap;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    border: none;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.downloader-closeBtn{
+    margin: 0;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: transparent;
+    float: right;
+}
+
+@media (max-width: 480px) {
+  .downloader-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap; /* allow wrapping */
+    flex-direction: row; /* important: row, not column */
+  }
+
+  .downloader-button {
+    font-size: 9px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+}
+
+
+

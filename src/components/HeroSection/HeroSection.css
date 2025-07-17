@@ -1,0 +1,140 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0px 10%;
+  height: calc(100vh - 70px);
+  background: #fafafa;
+  /* Soft neutral background */
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 2.7rem;
+  font-family: 'Poppins';
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  color: #555;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  background-color: #1a91f0;
+  /* Bright blue */
+  color: white;
+  font-size: 13px;
+  padding: 12px 20px;
+  text-decoration: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(26, 145, 240, 0.4);
+  user-select: none;
+  display: inline-block;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  background-color: #0f7ad1;
+  /* Darker blue on hover */
+  box-shadow: 0 6px 12px rgba(15, 122, 209, 0.6);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.cta-btn:active {
+  background-color: #0c5ea1;
+  /* Even darker when pressed */
+  box-shadow: 0 2px 6px rgba(12, 94, 161, 0.8);
+  transform: translateY(0);
+}
+
+.cta-btn2 {
+  color: #1a91f0;
+  font-size: 13px;
+  padding: 12px 20px;
+  margin-left: 20px;
+  text-decoration: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  border: 1px solid #1a91f0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 4px rgba(90, 91, 92, 0.1);
+  user-select: none;
+  display: inline-block;
+}
+
+.cta-btn2:hover{
+  transform: translateY(-2px);
+}
+
+.hero-image img {
+  width: 350px;
+  height: auto;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 992px) {
+  .hero {
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding: 40px 20px;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-top: 30px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .cta-btn,
+  .cta-btn2 {
+    font-size: 12px;
+    padding: 10px 16px;
+    margin: 10px 5px;
+  }
+
+  .hero-image img {
+    width: 70%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .hero-image img {
+    width: 85%;
+    max-width: 240px;
+  }
+}

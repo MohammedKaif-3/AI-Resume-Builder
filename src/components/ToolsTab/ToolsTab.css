@@ -1,0 +1,133 @@
+.tools-tab-container {
+  padding: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tools-title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-top: 10px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+}
+
+.tool-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #4a90e2;
+  background: #e8f0fe;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.tool-info {
+  flex-grow: 1;
+}
+
+.tool-info h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+  color: #444;
+}
+
+.tool-info p {
+  font-size: 13px;
+  color: #555;
+  margin: 0;
+}
+
+.tool-btn {
+  margin-top: 12px;
+  padding: 8px 18px;
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.tool-btn:hover {
+  background: #256ec2;
+}
+
+/* --------- Responsive Styles --------- */
+@media (max-width: 768px) {
+  .tool-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .tool-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+
+  .tool-info h3 {
+    font-size: 16px;
+  }
+
+  .tool-info p {
+    font-size: 12px;
+  }
+
+  .tool-btn {
+    align-self: stretch;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .tools-tab-container {
+    padding: 10px 15px;
+  }
+
+  .tools-title {
+    font-size: 20px;
+  }
+
+  .tool-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .tool-info h3 {
+    font-size: 15px;
+  }
+
+  .tool-info p {
+    font-size: 11px;
+  }
+
+  .tool-btn {
+    font-size: 11px;
+  }
+}

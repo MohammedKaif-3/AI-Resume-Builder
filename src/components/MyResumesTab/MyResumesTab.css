@@ -1,0 +1,236 @@
+
+.resumes-list {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 30px;
+    padding: 20px 0px;
+    overflow: auto;
+}
+
+
+.resume-card {
+    zoom: 0.27;
+    cursor: pointer;
+    width: 210mm;
+    height: 297mm;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.068);
+}
+
+.icon{
+    font-size: 30px !important;
+    color: white;
+    margin-right: 6px;
+}
+
+.tabs-heading {
+    margin-bottom: 30px;
+    font-size: 1.5rem !important;
+    color: #666;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.resume-options {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 25px;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.resume-options::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: -1;
+    border-radius: inherit;
+}
+
+
+.resume-card:hover .resume-options {
+    transform: translateY(0);
+}
+
+.resume-options-btn {
+    padding: 20px 50px;
+    font-size: 35px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.resume-options-btn:hover {
+    background-color: #023E8A;
+}
+
+.create-resume-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 260px;
+    border: 2px dashed #ccc;
+    background-color: #f9f9f9;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filename {
+    color: black;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    width: 215px;
+    text-wrap: wrap;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 13px;
+}
+
+.create-resume-card:hover {
+    background-color: #e0f7fa52;
+    border-color: #00abc1b2;
+}
+
+.create-resume-content {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.plus-icon {
+    display: block;
+    font-size: 25px !important;
+    margin-bottom: 0.5rem;
+}
+
+.text {
+    font-size: 0.7rem;
+}
+
+@media (max-width: 1200px) {
+  .resume-card {
+    zoom: 0.23;
+  }
+
+  .resume-options-btn {
+    font-size: 28px;
+    padding: 15px 35px;
+  }
+
+  .filename {
+    font-size: 12px;
+    width: 200px;
+  }
+}
+
+@media (max-width: 992px) {
+  .resume-card {
+    zoom: 0.2;
+  }
+
+  .create-resume-card {
+    width: 165px;
+    height: 225px;
+  }
+
+  .filename {
+    font-size: 11px;
+    width: 180px;
+  }
+
+  .resume-options-btn {
+    font-size: 24px;
+    padding: 12px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .resumes-list {
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .resume-card {
+    zoom: 0.18;
+  }
+
+  .create-resume-card {
+    width: 150px;
+    height: 205px;
+  }
+
+  .filename {
+    width: 160px;
+    font-size: 10px;
+  }
+
+  .tabs-heading {
+    font-size: 1.2rem !important;
+  }
+
+  .resume-options-btn {
+    font-size: 20px;
+    padding: 10px 24px;
+  }
+
+  .plus-icon {
+    font-size: 22px !important;
+  }
+
+  .text {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-card {
+    zoom: 0.16;
+  }
+
+  .create-resume-card {
+    width: 135px;
+    height: 185px;
+  }
+
+  .filename {
+    font-size: 9.5px;
+    width: 140px;
+  }
+
+  .resume-options-btn {
+    padding: 12px 16px;
+    font-size: 18px;
+  }
+
+  .tabs-heading {
+    font-size: 1rem !important;
+  }
+}

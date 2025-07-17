@@ -1,0 +1,308 @@
+/* Base styles (already responsive at base level) */
+.resume-checker-wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #fafafa;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.details {
+  text-align: center;
+  padding: 30px 20px;
+  max-width: 700px;
+}
+
+.details h1 {
+  font-size: 32px;
+  color: #4e4e4e;
+  margin-bottom: 10px;
+}
+
+.details p {
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.outerbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.score-box-result {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 2px solid gainsboro;
+  border-radius: 8px;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.box {
+  background-color: white;
+  border-radius: 5px;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+}
+
+.heading {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px 0;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.container2 {
+  border: 1px solid #1a91f0;
+  background-color: #eaf4ff;
+  border-radius: 4px;
+  padding: 25px;
+  width: 100%;
+  max-width: 900px;
+  margin: 40px 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.btn {
+  background-color: #137dd3;
+  color: white;
+  padding: 8px 16px;
+  font-family: "Poppins";
+  font-size: 13px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.btn:hover {
+  background-color: #1a67a5;
+}
+
+.icon2 {
+  font-size: 30px !important;
+}
+
+/* Suggestions */
+.suggestions-container {
+  max-width: 100%;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px 20px;
+  border-left: 3px solid #4e4e4e;
+  background-color: #ffffffd1;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  scrollbar-width: thin;
+  scrollbar-color: #4e4e4e79 transparent;
+}
+
+.suggestions-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestions-container::-webkit-scrollbar-thumb {
+  background-color: #4e4e4e;
+  border-radius: 4px;
+}
+
+.suggestions-container h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+  color: #4e4e4e;
+}
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions-list li {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e3a5f;
+  display: flex;
+  align-items: flex-start;
+}
+
+.suggestions-list .icon {
+  margin-right: 8px;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+/* File drop zone */
+.file-drop-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.file-drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 400px;
+  height: 250px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 10px auto 60px auto;
+  background: #1a90f007;
+  color: #777;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.file-drop-zone.highlight {
+  border-color: #6c63ff;
+}
+
+.drop-instruction {
+  color: #4e4e4e;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.drop-icon {
+  font-size: 25px !important;
+  color: #4e4e4e;
+}
+
+.drop-status {
+  color: #333;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.drop-error {
+  color: red;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .details h1 {
+    font-size: 26px;
+  }
+
+  .details p {
+    font-size: 12.5px;
+  }
+
+  .score-box-result {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .box,
+  .container2 {
+    width: 90vw;
+    padding: 15px;
+  }
+
+  .suggestions-container {
+    max-height: 250px;
+    padding: 10px 15px;
+  }
+
+  .suggestions-container h3 {
+    font-size: 1.1rem;
+  }
+
+  .suggestions-list li {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 12px;
+    padding: 6px 14px;
+  }
+
+  .file-drop-zone {
+    max-width: 90%;
+    height: 220px;
+    padding: 16px;
+  }
+
+  .drop-status {
+    font-size: 13px;
+  }
+
+  .drop-instruction {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .details h1 {
+    font-size: 22px;
+  }
+
+  .suggestions-container {
+    padding: 8px 12px;
+    max-height: 200px;
+  }
+
+  .suggestions-container h3 {
+    font-size: 1rem;
+  }
+
+  .suggestions-list li {
+    font-size: 0.85rem;
+  }
+
+  .details p {
+    font-size: 11.5px;
+  }
+
+  .suggestions-container h3 {
+    font-size: 1rem;
+  }
+
+  .suggestions-list li {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    font-size: 11.5px;
+    padding: 5px 12px;
+  }
+
+  .file-drop-zone {
+    height: 200px;
+    padding: 14px;
+  }
+
+  .drop-status {
+    font-size: 12.5px;
+  }
+
+  .drop-instruction {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,140 @@
+.templates-wrapper{
+    height: 100vh;
+    overflow: auto;
+}
+.templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 40px;
+    padding: 30px 40px;
+    justify-content: center;
+    align-items: start;
+    overflow-y: auto;
+}
+
+.template-selection-container {
+    padding-top: 30px;
+}
+
+.template-card {
+    zoom: 0.35;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+}
+
+/* Hover animation */
+.template-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    border-color: #1a91f0;
+}
+
+.subheading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    color: #555;
+    padding: 0 20px;
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.85;
+}
+
+
+/* Preview tag */
+/* .template-card::before {
+  content: "Recommended";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #d3c723;
+  color: white;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Poppins";
+  padding: 5px 15px;
+  border-radius: 5px;
+  z-index: 2;
+} */
+
+.templates-heading {
+    font-size: 33px;
+    color: #4e4e4e;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 0.3px;
+}
+
+/* === Overlay + Button === */
+.template-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.template-card:hover .template-overlay {
+    opacity: 1;
+}
+
+.template-action {
+    background-color: #1a91f0;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 4px;
+    border: none;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+.template-action:hover {
+    background-color: #007ad9;
+}
+
+@media (max-width: 1024px) {
+  .templates-heading {
+    font-size: 28px;
+  }
+
+  .subheading {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .templates-heading {
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-size: 9.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .templates-heading {
+    font-size: 20px;
+  }
+
+  .subheading {
+    font-size: 9px;
+  }
+}

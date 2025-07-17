@@ -1,0 +1,108 @@
+/* editor.css */
+
+/* Styling the editor container */
+.editor-container {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 9px;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  transition: all-color 0.3s ease;
+}
+
+.editor-toolbar {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #aaa;
+}
+
+/* Styling the editor content area */
+.editor-container:focus-within {
+  border-color: #6c87ff;
+  background-color: #f8f8f8;
+}
+
+/* Button styles */
+button {
+  margin-right: 6px;
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button.active {
+  background: #d3e5ff;
+  font-weight: bold;
+}
+
+/* Customizing the editor content text area */
+
+/* Optional: Change cursor for text editing */
+.editor-content:focus {
+  cursor: text;
+}
+
+.editor-content {
+  font-family: 'Poppins', 'Arial', sans-serif;
+  padding: 2px;
+  overflow: auto;
+  height: 100px;
+  margin: 0;
+}
+
+.editor-content *:focus {
+  outline: none !important;
+}
+
+/* For better readability */
+.editor-content p,
+ol,
+ul,
+strong,
+em,
+b,
+i,
+li {
+  font-size: 11px !important;
+  color: #333;
+}
+
+.editor-content ul,
+.editor-content ol {
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tools {
+  display: flex;
+  gap: 2px;
+  justify-content: start;
+}
+
+.ai-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.ai-controls-select {
+  height: 100%;
+  outline: none;
+  font-size: 11px;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  background: #f9f9f9;
+  font-family: "Poppins";
+  border-radius: 3px;
+}

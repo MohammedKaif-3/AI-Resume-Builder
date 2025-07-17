@@ -1,0 +1,72 @@
+.stats-section {
+    background-color: #eee;
+    padding: 50px 16px;
+    text-align: center;
+}
+
+.stats-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.stat-card {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 30px 0;
+    width: 280px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 0.8rem !important;
+    color: #aaa;
+    margin-right: 5px;
+}
+
+.stat-card h3 {
+    font-size: 2.5rem;
+    font-family: "Poppins";
+    margin: 0;
+    cursor: default;
+    color: #888;
+}
+
+.stat-card p {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    cursor: default;
+    color: #888;
+}
+
+@media (max-width: 576px) {
+  .stats-section {
+    padding: 40px 12px;
+  }
+
+  .stats-container {
+    gap: 18px;
+  }
+
+  .stat-card {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .stat-card h3 {
+    font-size: 2rem;
+  }
+
+  .stat-card p {
+    font-size: 0.75rem;
+  }
+}

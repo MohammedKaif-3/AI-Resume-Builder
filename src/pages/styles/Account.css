@@ -1,0 +1,39 @@
+.account-page {
+    display: flex;
+    height: 100vh;
+}
+
+.tab-content {
+    position: fixed;
+    width: calc(100% - 270px);
+    height: 100%;
+    right: 0;
+    top: 0;
+    overflow: auto;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Hamburger button (mobile only) */
+.hamburger-btn {
+  display: none;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  z-index: 1200;
+  cursor: pointer;
+  color: #333;
+}
+
+.hamburger{
+    font-size: 20px !important;
+}
+
+body.sidebar-open {
+  overflow: hidden;
+}
