@@ -1,4 +1,4 @@
-import "./ScoreBox.css";
+import "./Scorebox.css";
 
 const ScoreBox = ({ score, feedback = [], onClose, isVisible }) => {
   return (
