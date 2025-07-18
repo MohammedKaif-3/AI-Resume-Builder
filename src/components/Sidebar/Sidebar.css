@@ -1,6 +1,6 @@
 .sidebar {
   width: 270px;
-  height: 100vh;
+  height: 100% !important;
   background-color: #ffffff;
   padding: 20px;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.1);
@@ -77,11 +77,22 @@
   border-radius: 4px;
 }
 
+.home-btn{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-family: "Poppins";
+}
+
 .logout-btn {
-  background-color: #f44336;
+  background-color: #f44336e3;
   color: white;
   border: none;
   padding: 10px;
+  margin: 10px 0;
   font-family: "Poppins", sans-serif;
   font-size: 13px;
   letter-spacing: 1px;

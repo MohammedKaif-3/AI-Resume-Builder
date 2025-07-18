@@ -60,6 +60,7 @@ const Sidebar = ({ onLogout, isOpen, closeSidebar }) => {
                 <div className="line-separater"></div>
             </ul>
 
+            <button className="home-btn" onClick={() => navigate('/')}><i className="fa-solid fa-house"></i> Home</button>
             <button className="logout-btn" onClick={onLogout}>Logout</button>
         </div>
     );
