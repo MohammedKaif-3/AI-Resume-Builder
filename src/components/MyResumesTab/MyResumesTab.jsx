@@ -200,13 +200,21 @@ const MyResumesTab = () => {
                     resumes.map((resume) => (
                         <div>
                             <div
-                                onClick={() => openResumeInEditor(resume)}
                                 className="resume-card"
                                 key={resume._id}
                             >
                                 <Resume template={resume.template} resumeData={resume} />
 
-                                <div className="resume-options" onClick={(e) => e.stopPropagation()}>
+                                <div className="template-overlay">
+                                    <button
+                                        className="template-action"
+                                        onClick={() => openResumeInEditor(resume)}
+                                    >
+                                        Edit
+                                    </button>
+                                </div>
+
+                                {/* <div className="resume-options" onClick={(e) => e.stopPropagation()}>
                                     <button
                                         disabled={isDownloading}
                                         style={{
@@ -229,7 +237,7 @@ const MyResumesTab = () => {
                                         {isDeleting ? "Deleting..." : " Delete"}
                                     </button>
 
-                                </div>
+                                </div> */}
                             </div>
                             <div className="filename">{resume.filename} <span style={{ color: '#aaa' }}>.pdf</span> </div>
                         </div>
