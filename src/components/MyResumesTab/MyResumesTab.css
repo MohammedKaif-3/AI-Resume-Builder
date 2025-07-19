@@ -10,7 +10,6 @@
 }
 
 .resume-card {
-  zoom: 0.35; /* Keeps resume scaled down */
   width: 794px;  /* A4 width */
   height: 1123px; /* A4 height */
   position: relative;
@@ -25,19 +24,6 @@
   justify-content: space-between;
   border: 1px solid #e0e0e0;
 }
-
-@media (max-width: 768px) {
-  .resume-card {
-    zoom: 0.28;
-  }
-}
-
-@media (max-width: 480px) {
-  .resume-card {
-    zoom: 0.22;
-  }
-}
-
 
 .resume-card:hover {
   transform: translateY(-6px);
