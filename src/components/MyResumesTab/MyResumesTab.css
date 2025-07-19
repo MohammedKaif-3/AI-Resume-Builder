@@ -62,7 +62,7 @@
   padding: 15px 40px;
   border-radius: 5px;
   border: none;
-  font-size: 30px;
+  font-size: 25px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
@@ -126,7 +126,7 @@
 }
 
 .plus-icon {
-  font-size: 50px !important;
+  font-size: 40px !important;
   margin-bottom: 0.5rem;
 }
 
@@ -159,9 +159,6 @@
     zoom: 0.3;
   }
 
-  .icon{
-    font-size: 25px !important;
-  }
 }
 
 @media (max-width: 576px) {
@@ -172,10 +169,6 @@
   .create-resume-card,
   .resume-card {
     zoom: 0.3;
-  }
-
-  .icon{
-    font-size: 25px !important;
   }
 
 }
