@@ -2,7 +2,6 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  flex-wrap: wrap;
   gap: 8px;
   margin: 0 5px;
   padding: 6px 0;
@@ -23,9 +22,9 @@
   border: none;
   border-radius: 4px;
   transition: all 0.3s ease;
-  background-color: var(--accent, #2d2d2d); /* fallback color */
-  flex: 0 1 auto; /* prevent stretch */
-  max-width: calc(50% - 6px); /* keeps 2 per row on mobile */
+  background-color: var(--accent, #2d2d2d);
+  flex: 0 1 auto;
+  box-sizing: border-box;
 }
 
 .downloader-closeBtn {
@@ -43,15 +42,16 @@
 @media (max-width: 480px) {
   .downloader-container {
     justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
     padding: 6px 10px;
   }
 
   .downloader-button {
     font-size: 10px;
-    padding: 10px;
-    max-width: 48%; /* ensures 2 buttons per row */
-    flex: 1 1 auto;
+    padding: 10px 12px;
+    flex: 1 1 45%; /* maintain 2 per row */
+    max-width: 48%;
   }
 }
 
@@ -60,12 +60,14 @@
   .downloader-container {
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
     padding: 6px 12px;
   }
 
   .downloader-button {
     font-size: 10.5px;
     padding: 10px 14px;
+    flex: 1 1 auto;
     max-width: unset;
   }
 }
