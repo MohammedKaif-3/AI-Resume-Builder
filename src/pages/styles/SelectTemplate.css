@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   gap: 30px;
   padding: 20px 30px;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   overflow-y: auto;
