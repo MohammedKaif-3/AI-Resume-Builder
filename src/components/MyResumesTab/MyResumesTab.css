@@ -48,6 +48,10 @@
   opacity: 1;
 }
 
+.icon{
+  font-size: 20px !important;
+  color: white;
+}
 .resume-action {
   background-color: #1a91f0;
   color: white;
@@ -137,12 +141,20 @@
 }
 
 @media (max-width: 768px) {
+  .resumes-list{
+    justify-content: center;
+  }
+
   .resume-card {
     zoom: 0.3;
   }
 }
 
 @media (max-width: 576px) {
+  .resumes-list{
+    justify-content: center;
+  }
+  
   .resume-card {
     zoom: 0.3;
   }
