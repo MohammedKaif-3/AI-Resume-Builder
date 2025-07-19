@@ -248,16 +248,13 @@ const MyResumesTab = () => {
                         </div>
                     ))
                 ) : (
-                    <p></p>
-                )}
-
-                {/* Always render Create Resume Card */}
-                <div className="create-resume-card" onClick={handleCreateResumeClick}>
-                    <div className="create-resume-content">
-                        <i className="fa-solid fa-plus plus-icon" style={{ fontSize: '40px' }}></i>
-                        <p className='text'>Create New Resume</p>
+                    <div className="create-resume-card" onClick={handleCreateResumeClick}>
+                        <div className="create-resume-content">
+                            <i className="fa-solid fa-plus plus-icon" style={{ fontSize: '40px' }}></i>
+                            <p className='text'>Create New Resume</p>
+                        </div>
                     </div>
-                </div>
+                )}
 
             </div>
             {showModal && (
