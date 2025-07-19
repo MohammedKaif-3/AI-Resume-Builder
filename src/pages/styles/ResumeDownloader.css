@@ -32,14 +32,17 @@
 @media (max-width: 480px) {
   .downloader-container {
     display: flex;
-    justify-content: space-evenly;
-    flex-wrap: nowrap; /* allow wrapping */
+    gap: 10px;
+    margin: 0;
+    justify-content: space-between;
+    flex-wrap: wrap; 
     flex-direction: row; /* important: row, not column */
   }
 
   .downloader-button {
     font-size: 9px;
-    padding: 11px 12px;
+    padding: 12px;
+    flex: 1;
     text-align: center;
   }
 }

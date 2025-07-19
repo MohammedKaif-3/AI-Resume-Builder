@@ -21,6 +21,27 @@ const CreateResume = () => {
 
   const [showForm, setShowForm] = useState(true);
 
+  useEffect(() => {
+    const updateZoom = () => {
+      if (!wrapperRef.current) return;
+
+      const wrapperWidth = wrapperRef.current.offsetWidth;
+      const wrapperHeight = wrapperRef.current.offsetHeight;
+
+      const resumeWidth = 794; // 210mm in px at 96dpi
+      const resumeHeight = 1123; // 297mm in px at 96dpi
+
+      const zoomX = wrapperWidth / resumeWidth;
+      const zoomY = wrapperHeight / resumeHeight;
+
+      setZoomLevel(Math.min(zoomX, zoomY));
+    };
+
+    updateZoom();
+    window.addEventListener('resize', updateZoom);
+    return () => window.removeEventListener('resize', updateZoom);
+  }, [showForm]);
+
   const useIsMobile = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -138,28 +159,6 @@ const CreateResume = () => {
       sessionStorage.setItem("resumeData", JSON.stringify(resumeData));
     }
   }, [resumeData]);
-
-
-  useEffect(() => {
-    const updateZoom = () => {
-      if (!wrapperRef.current) return;
-
-      const wrapperWidth = wrapperRef.current.offsetWidth;
-      const wrapperHeight = wrapperRef.current.offsetHeight;
-
-      const resumeWidth = 794; // 210mm in px at 96dpi
-      const resumeHeight = 1123; // 297mm in px at 96dpi
-
-      const zoomX = wrapperWidth / resumeWidth;
-      const zoomY = wrapperHeight / resumeHeight;
-
-      setZoomLevel(Math.min(zoomX, zoomY));
-    };
-
-    updateZoom();
-    window.addEventListener('resize', updateZoom);
-    return () => window.removeEventListener('resize', updateZoom);
-  }, []);
 
   // Generic handler for top-level fields
   const handleChange = (e) => {
@@ -440,7 +439,7 @@ const CreateResume = () => {
             </>
           )}
 
-          {(!showForm ||  !isMobile) && (
+          {(!showForm || !isMobile) && (
             <>
               <div className='res-header'>
                 <ResumeDownloader template={template} resumeData={resumeData} setResumeData={setResumeData} />
