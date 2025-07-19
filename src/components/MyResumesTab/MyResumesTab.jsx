@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useContext, useState } from 'react';
 import './MyResumesTab.css';
 import AppContext from '../../context/AppContext';
 import Resume from '../../pages/Resume';
@@ -39,9 +39,6 @@ const MyResumesTab = () => {
 
     const { resumes, getResumesData } = useContext(AppContext);
 
-    const wrapperRef = useRef(null);
-    const [zoomLevel, setZoomLevel] = useState(1);
-
     const [isDownloading, setIsDownloading] = useState(false);
     const [isDeleting, setIsDeleting] = useState(false);
 
@@ -63,27 +60,6 @@ const MyResumesTab = () => {
         "wp-2col-des-tem4": Template_12,
         "wp-2col-des-tem5": Template_13
     };
-
-    useEffect(() => {
-        const updateZoom = () => {
-            if (!wrapperRef.current) return;
-
-            const wrapperWidth = wrapperRef.current.offsetWidth;
-            const wrapperHeight = wrapperRef.current.offsetHeight;
-
-            const resumeWidth = 794; // 210mm in px at 96dpi
-            const resumeHeight = 1123; // 297mm in px at 96dpi
-
-            const zoomX = wrapperWidth / resumeWidth;
-            const zoomY = wrapperHeight / resumeHeight;
-
-            setZoomLevel(Math.min(zoomX, zoomY));
-        };
-
-        updateZoom();
-        window.addEventListener('resize', updateZoom);
-        return () => window.removeEventListener('resize', updateZoom);
-    }, []);
 
     getResumesData();
 
@@ -217,7 +193,7 @@ const MyResumesTab = () => {
         <div className='my-resumes-tab'>
 
             <h1 className='tabs-heading'>My Resumes</h1>
-            <div className="resumes-list"  ref={wrapperRef}>
+            <div className="resumes-list">
 
                 {/* Render resumes if available */}
                 {resumes && resumes.length > 0 ? (
@@ -226,7 +202,6 @@ const MyResumesTab = () => {
                             <div
                                 className="resume-card"
                                 key={resume._id}
-                                style={{zoom: zoomLevel}}
                             >
                                 <Resume template={resume.template} resumeData={resume} />
 

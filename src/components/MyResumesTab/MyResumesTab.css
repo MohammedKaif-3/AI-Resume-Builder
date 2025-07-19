@@ -10,10 +10,10 @@
 }
 
 .resume-card {
-  width: 794px;  /* A4 width */
+  zoom: 0.45; /* default desktop zoom */
+  width: 794px;   /* A4 width */
   height: 1123px; /* A4 height */
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -23,14 +23,15 @@
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid #e0e0e0;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .resume-card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
   border-color: #1a91f0;
 }
 
+/* 👇 Overlay and action styles stay unchanged */
 .resume-overlay {
   position: absolute;
   inset: 0;
@@ -41,6 +42,10 @@
   align-items: center;
   transition: opacity 0.3s ease;
   z-index: 1;
+}
+
+.resume-card:hover .resume-overlay {
+  opacity: 1;
 }
 
 .resume-action {
@@ -54,7 +59,11 @@
   cursor: pointer;
 }
 
-.resume-actions-strip{
+.resume-action:hover {
+  background-color: #007ad9;
+}
+
+.resume-actions-strip {
   position: absolute;
   bottom: 10px;
   padding: 0 10px;
@@ -63,18 +72,14 @@
   justify-content: space-between;
 }
 
-.resume-card:hover .resume-overlay {
-    opacity: 1;
-}
-
-.resume-action:hover {
-    background-color: #007ad9;
-}
-
-.icon {
-  font-size: 30px !important;
-  color: white;
-  margin-right: 6px;
+.filename {
+  color: black;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 8px;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .tabs-heading {
@@ -85,11 +90,7 @@
   font-family: "Poppins", sans-serif;
 }
 
-
-.resume-card:hover .resume-options {
-  transform: translateY(0);
-}
-
+/* Create New Resume Box */
 .create-resume-card {
   display: flex;
   align-items: center;
@@ -103,20 +104,6 @@
   transition: all 0.3s ease;
 }
 
-.filename {
-  color: black;
-  font-family: "Poppins", sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: default;
-  text-align: center;
-  text-overflow: ellipsis;
-  box-sizing: border-box;
-  padding: 8px;
-  font-size: 13px;
-}
-
 .create-resume-card:hover {
   background-color: #e0f7fa52;
   border-color: #00abc1b2;
@@ -128,7 +115,6 @@
 }
 
 .plus-icon {
-  display: block;
   font-size: 25px !important;
   margin-bottom: 0.5rem;
 }
@@ -137,37 +123,27 @@
   font-size: 0.7rem;
 }
 
+/* ✅ RESPONSIVE ZOOM ADJUSTMENTS */
 @media (max-width: 1200px) {
-  
+  .resume-card {
+    zoom: 0.4;
+  }
 }
 
 @media (max-width: 992px) {
-
-  .create-resume-card {
-    width: 165px;
-    height: 225px;
+  .resume-card {
+    zoom: 0.35;
   }
-
 }
 
 @media (max-width: 768px) {
-
-  .tabs-heading {
-    font-size: 1.2rem !important;
-  }
-
-  .plus-icon {
-    font-size: 22px !important;
-  }
-
-  .text {
-    font-size: 0.65rem;
+  .resume-card {
+    zoom: 0.3;
   }
 }
 
-@media (max-width: 480px) {
-
-  .tabs-heading {
-    font-size: 1rem !important;
+@media (max-width: 576px) {
+  .resume-card {
+    zoom: 0.25;
   }
 }
