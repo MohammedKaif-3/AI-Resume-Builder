@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import './MyResumesTab.css';
 import AppContext from '../../context/AppContext';
 import Resume from '../../pages/Resume';
@@ -39,7 +39,7 @@ const MyResumesTab = () => {
 
     const { resumes, getResumesData } = useContext(AppContext);
 
-
+    const wrapperRef = useRef(null);
     const [zoomLevel, setZoomLevel] = useState(1);
 
     const [isDownloading, setIsDownloading] = useState(false);
