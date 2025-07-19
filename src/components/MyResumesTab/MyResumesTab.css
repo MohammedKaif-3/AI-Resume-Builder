@@ -10,9 +10,12 @@
 }
 
 .resume-card {
-  zoom: 0.45; /* default desktop zoom */
-  width: 794px;   /* A4 width */
-  height: 1123px; /* A4 height */
+  zoom: 0.45;
+  /* default desktop zoom */
+  width: 794px;
+  /* A4 width */
+  height: 1123px;
+  /* A4 height */
   position: relative;
   background-color: #ffffff;
   border-radius: 12px;
@@ -48,17 +51,18 @@
   opacity: 1;
 }
 
-.icon{
-  font-size: 20px !important;
+.icon {
+  font-size: 35px !important;
   color: white;
 }
+
 .resume-action {
   background-color: #1a91f0;
   color: white;
-  padding: 20px 40px;
+  padding: 15px 40px;
   border-radius: 5px;
   border: none;
-  font-size: 35px;
+  font-size: 30px;
   font-family: 'Poppins', sans-serif;
   cursor: pointer;
 }
@@ -99,8 +103,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 260px;
+  zoom: 0.45;
+  /* default desktop zoom */
+  width: 794px;
+  /* A4 width */
+  height: 1123px;
   border: 2px dashed #ccc;
   background-color: #f9f9f9;
   color: #666;
@@ -129,33 +136,38 @@
 
 /* ✅ RESPONSIVE ZOOM ADJUSTMENTS */
 @media (max-width: 1200px) {
+  .create-resume-card,
   .resume-card {
     zoom: 0.4;
   }
 }
 
 @media (max-width: 992px) {
+  .create-resume-card,
   .resume-card {
     zoom: 0.35;
   }
 }
 
 @media (max-width: 768px) {
-  .resumes-list{
+  .resumes-list {
     justify-content: center;
   }
 
+  .create-resume-card,
   .resume-card {
     zoom: 0.3;
   }
 }
 
 @media (max-width: 576px) {
-  .resumes-list{
+  .resumes-list {
     justify-content: center;
   }
-  
+
+  .create-resume-card,
   .resume-card {
     zoom: 0.3;
   }
+
 }
