@@ -1,18 +1,19 @@
 .resumes-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* auto-fit is more dynamic */
   gap: 40px;
   padding: 30px 40px;
   width: 100%;
-  justify-content: center;
+  justify-items: center; /* centers items inside grid cells */
   align-items: start;
   overflow-y: auto;
 }
 
 .resume-card {
-  zoom: 0.35;
-  width: fit-content;
-  height: fit-content;
+  transform: scale(0.35); /* preferred over zoom for compatibility */
+  transform-origin: top center; /* so it shrinks from the center */
+  width: 794px;  /* A4 width for preview */
+  height: 1123px; /* A4 height for preview */
   position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: #ffffff;
@@ -140,10 +141,6 @@
 
 @media (max-width: 1200px) {
 
-  .filename {
-    font-size: 12px;
-    width: 200px;
-  }
 }
 
 @media (max-width: 992px) {
