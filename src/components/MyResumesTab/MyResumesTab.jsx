@@ -217,7 +217,7 @@ const MyResumesTab = () => {
         <div className='my-resumes-tab'>
 
             <h1 className='tabs-heading'>My Resumes</h1>
-            <div className="resumes-list">
+            <div className="resumes-list"  ref={wrapperRef}>
 
                 {/* Render resumes if available */}
                 {resumes && resumes.length > 0 ? (
