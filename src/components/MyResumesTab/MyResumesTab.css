@@ -57,7 +57,8 @@
 
 .resume-actions-strip{
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  padding: 0 10px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -139,11 +140,6 @@
 
 @media (max-width: 1200px) {
 
-  .resume-options-btn {
-    font-size: 28px;
-    padding: 15px 35px;
-  }
-
   .filename {
     font-size: 12px;
     width: 200px;
@@ -162,10 +158,6 @@
     width: 180px;
   }
 
-  .resume-options-btn {
-    font-size: 24px;
-    padding: 12px 30px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -175,11 +167,6 @@
     padding: 10px;
   }
 
-  .create-resume-card {
-    width: 150px;
-    height: 205px;
-  }
-
   .filename {
     width: 160px;
     font-size: 10px;
@@ -187,11 +174,6 @@
 
   .tabs-heading {
     font-size: 1.2rem !important;
-  }
-
-  .resume-options-btn {
-    font-size: 20px;
-    padding: 10px 24px;
   }
 
   .plus-icon {
@@ -205,19 +187,9 @@
 
 @media (max-width: 480px) {
 
-  .create-resume-card {
-    width: 135px;
-    height: 185px;
-  }
-
   .filename {
     font-size: 9.5px;
     width: 140px;
-  }
-
-  .resume-options-btn {
-    padding: 12px 16px;
-    font-size: 18px;
   }
 
   .tabs-heading {
