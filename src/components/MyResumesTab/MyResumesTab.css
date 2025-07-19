@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 30px;
   padding: 20px 30px;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 100%;
   overflow-y: auto;
@@ -144,6 +144,6 @@
 
 @media (max-width: 576px) {
   .resume-card {
-    zoom: 0.25;
+    zoom: 0.3;
   }
 }
