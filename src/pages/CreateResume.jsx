@@ -58,6 +58,15 @@ const CreateResume = () => {
 
   const [techInput, setTechInput] = useState('');
 
+  const withPhotoTemplates = [
+    "p-2col-tem1",
+    "p-2col-tem2",
+    "p-1col-tem1",
+    "p-1col-tem2",
+    "p-2col-des-tem2",
+    "p-2col-des-tem3"
+  ];
+
   const { templateId } = useParams();
   const template = [
     'wp-1col-tem1',
@@ -507,14 +516,14 @@ const CreateResume = () => {
               <div className='editor-section'>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>First Name</label>
                     <input
                       placeholder='John'
                       className='editor-input' name="firstname" value={resumeData.firstname || ""} onChange={handleChange} />
                   </div>
 
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>Last Name</label>
                     <input
                       placeholder='Doe'
@@ -523,88 +532,92 @@ const CreateResume = () => {
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>Job Title</label>
                     <input
                       className='editor-input' name="jobtitle" placeholder='Software Engineer' value={resumeData.jobtitle || ""} onChange={handleChange} />
                   </div>
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>Email</label>
                     <input
                       className='editor-input' name="email" placeholder='johndoe@gmail.com' value={resumeData.email || ""} onChange={handleChange} />
                   </div>
                 </div>
 
-                <label className='editor-label'>Profile Image</label>
-                <div className='editor-input'>
-                  <label htmlFor="profileUpload" style={{
-                    display: 'inline-block',
-                    padding: '8px 16px',
-                    backgroundColor: '#0262A9',
-                    color: 'white',
-                    marginRight: '50px',
-                    borderRadius: '3px',
-                    cursor: 'pointer',
-                    fontSize: '11px',
-                    fontFamily: 'Poppins',
-                  }}>
-                    Upload Image
-                  </label>
-                  <input
-                    id="profileUpload"
-                    type="file"
-                    accept="image/*"
-                    style={{ display: 'none' }}
-                    onChange={handleImageChange}
-                  />
-
-                  {resumeData.profileimg && (
-                    <div style={{ position: 'relative', display: 'inline-block', marginTop: '10px' }}>
-                      <img
-                        src={resumeData.profileimg}
-                        alt="Profile Preview"
-                        style={{
-                          width: '40px',
-                          height: '40px',
-                          objectFit: 'cover',
-                          marginLeft: '50px',
-                          borderRadius: '8px',
-                          display: 'block'
-                        }}
+                {withPhotoTemplates.includes((template || '').trim()) && (
+                  <>
+                    <label className='editor-label'>Profile Image</label>
+                    <div className='editor-input'>
+                      <label htmlFor="profileUpload" style={{
+                        display: 'inline-block',
+                        padding: '8px 16px',
+                        backgroundColor: '#0262A9',
+                        color: 'white',
+                        marginRight: '50px',
+                        borderRadius: '3px',
+                        cursor: 'pointer',
+                        fontSize: '11px',
+                        fontFamily: 'Poppins',
+                      }}>
+                        Upload Image
+                      </label>
+                      <input
+                        id="profileUpload"
+                        type="file"
+                        accept="image/*"
+                        style={{ display: 'none' }}
+                        onChange={handleImageChange}
                       />
-                      <span
-                        onClick={removeProfileImage}
-                        style={{
-                          position: 'absolute',
-                          top: '-5px',
-                          right: '-5px',
-                          backgroundColor: '#ff4d4f',
-                          color: '#fff',
-                          borderRadius: '50%',
-                          width: '15px',
-                          height: '15px',
-                          fontSize: '11px',
-                          textAlign: 'center',
-                          lineHeight: '18px',
-                          cursor: 'pointer',
-                          boxShadow: '0 0 2px rgba(0,0,0,0.3)',
-                        }}
-                        title="Remove Image"
-                      >
-                        &times;
-                      </span>
-                    </div>
-                  )}
 
-                </div>
+                      {resumeData.profileimg && (
+                        <div style={{ position: 'relative', display: 'inline-block', marginTop: '10px' }}>
+                          <img
+                            src={resumeData.profileimg}
+                            alt="Profile Preview"
+                            style={{
+                              width: '40px',
+                              height: '40px',
+                              objectFit: 'cover',
+                              marginLeft: '50px',
+                              borderRadius: '8px',
+                              display: 'block'
+                            }}
+                          />
+                          <span
+                            onClick={removeProfileImage}
+                            style={{
+                              position: 'absolute',
+                              top: '-5px',
+                              right: '-5px',
+                              backgroundColor: '#ff4d4f',
+                              color: '#fff',
+                              borderRadius: '50%',
+                              width: '15px',
+                              height: '15px',
+                              fontSize: '11px',
+                              textAlign: 'center',
+                              lineHeight: '18px',
+                              cursor: 'pointer',
+                              boxShadow: '0 0 2px rgba(0,0,0,0.3)',
+                            }}
+                            title="Remove Image"
+                          >
+                            &times;
+                          </span>
+                        </div>
+                      )}
+
+                    </div>
+                  </>
+                )}
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>Phone</label>
                     <input
                       className='editor-input' name="phone" placeholder='+91 9392373488' value={resumeData.phone || ""} onChange={handleChange} />
                   </div>
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>LinkedIn</label>
                     <input
                       className='editor-input' name="linkedin" placeholder='linkedin.com/in/johndoe' value={resumeData.linkedin || ""} onChange={handleChange} />
@@ -612,12 +625,12 @@ const CreateResume = () => {
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>GitHub</label>
                     <input
                       className='editor-input' name="github" placeholder='github.com/johndoe' value={resumeData.github || ""} onChange={handleChange} />
                   </div>
-                  <div>
+                  <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                     <label className='editor-label'>Website / Portfolio</label>
                     <input
                       className='editor-input' name="website" placeholder='johndoe.dev' value={resumeData.website || ""} onChange={handleChange} />
@@ -655,7 +668,7 @@ const CreateResume = () => {
               {resumeData.education.map((edu, index) => (
                 <div key={index} className='editor-section'>
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Degree</label>
                       <input
                         placeholder='Btech'
@@ -664,7 +677,7 @@ const CreateResume = () => {
                         onChange={e => updateArrayField('education', index, 'degree', e.target.value)}
                       />
                     </div>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Institution</label>
                       <input
                         className='editor-input'
@@ -676,7 +689,7 @@ const CreateResume = () => {
                   </div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Start Date</label>
                       <input
                         className='editor-input'
@@ -685,7 +698,7 @@ const CreateResume = () => {
                         onChange={e => updateArrayField('education', index, 'startdate', e.target.value)}
                       />
                     </div>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>End Date</label>
                       <input
                         className='editor-input'
@@ -698,7 +711,7 @@ const CreateResume = () => {
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
 
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Branch [If Specifiable]</label>
                       <input
                         className='editor-input'
@@ -708,7 +721,7 @@ const CreateResume = () => {
                       />
                     </div>
 
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Percentage / CGPA</label>
                       <input
                         className='editor-input'
@@ -755,7 +768,7 @@ const CreateResume = () => {
 
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Position</label>
                       <input
                         placeholder='Software Engineer'
@@ -764,7 +777,7 @@ const CreateResume = () => {
                         onChange={e => updateArrayField('experience', index, 'position', e.target.value)}
                       />
                     </div>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Company</label>
                       <input
                         placeholder='Google'
@@ -776,7 +789,7 @@ const CreateResume = () => {
                   </div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Start Data</label>
                       <input
                         placeholder='02/2022'
@@ -785,7 +798,7 @@ const CreateResume = () => {
                         onChange={e => updateArrayField('experience', index, 'startdate', e.target.value)}
                       />
                     </div>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>End Data</label>
                       <input
                         placeholder='06/2024'
@@ -899,7 +912,7 @@ const CreateResume = () => {
               {resumeData.projects.map((project, index) => (
                 <div key={index} className='editor-section'>
                   <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>Project Name</label>
                       <input
                         placeholder='Portfolio Website'
@@ -908,7 +921,7 @@ const CreateResume = () => {
                         onChange={e => updateArrayField('projects', index, 'name', e.target.value)}
                       />
                     </div>
-                    <div>
+                    <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                       <label className='editor-label'>GitHub Link</label>
                       <input
                         className='editor-input'
@@ -1041,7 +1054,7 @@ const CreateResume = () => {
                     <div key={key} className='editor-section'>
 
                       <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px' }}>
-                        <div>
+                        <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                           <label className='editor-label'>Title</label>
                           <input
                             value={item.title || ""}
@@ -1050,7 +1063,7 @@ const CreateResume = () => {
                             className='editor-input'
                           />
                         </div>
-                        <div>
+                        <div style={{display: 'flex', flexDirection:'column', width: '50%'}}>
                           <label className='editor-label'>Link [If any]</label>
                           <input
                             value={item.link || ""}
