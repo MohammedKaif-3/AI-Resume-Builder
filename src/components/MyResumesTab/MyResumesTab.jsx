@@ -236,6 +236,7 @@ const MyResumesTab = () => {
                                             <i className="fa-solid fa-trash icon" />
                                             {isDeleting ? "Deleting..." : " Delete"}
                                         </button>
+                                        
                                     </div>
 
 
