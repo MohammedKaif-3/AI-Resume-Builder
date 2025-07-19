@@ -32,6 +32,37 @@
   border-color: #1a91f0;
 }
 
+.resume-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.637);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.resume-action {
+  background-color: #1a91f0;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 4px;
+  border: none;
+  font-size: 35px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+
+.resume-card:hover .resume-overlay {
+    opacity: 1;
+}
+
+.resume-action:hover {
+    background-color: #007ad9;
+}
+
 .icon {
   font-size: 30px !important;
   color: white;

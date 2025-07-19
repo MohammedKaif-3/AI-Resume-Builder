@@ -416,9 +416,9 @@ const SelectTemplate = () => {
             {templates.map((template) => (
               <div className="template-card" key={template.id}>
                 <Resume template={template.id} resumeData={template.resumeData} />
-                <div className="template-overlay">
+                <div className="resume-overlay">
                   <button
-                    className="template-action"
+                    className="resume-action"
                     onClick={() => handleSelect(template.id)}
                   >
                     Use Template
