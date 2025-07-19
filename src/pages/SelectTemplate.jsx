@@ -17,10 +17,8 @@ import Template_10 from '../components/ResumeTemplates/Template_10';
 import Template_11 from '../components/ResumeTemplates/Template_11';
 import Template_12 from '../components/ResumeTemplates/Template_12';
 import Template_13 from '../components/ResumeTemplates/Template_13';
-import profileImg from '../assets/profile.png';
 
 const SelectTemplate = () => {
-
 
   const [resumeData, setResumeData] = useState({
     resumelineheight: 1.5,
@@ -401,8 +399,6 @@ const SelectTemplate = () => {
   };
 
   const safeNavigate = useSafeNavigate();
-
-
 
   const handleSelect = (templateId) => {
     safeNavigate(`/create-resume/${templateId}`);

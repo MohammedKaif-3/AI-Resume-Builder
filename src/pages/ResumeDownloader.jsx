@@ -383,7 +383,7 @@ const ResumeDownloader = ({ template, resumeData, setResumeData }) => {
           padding: '8px',
           height: '50%',
           width: '100%',
-          maxWidth: '80%',
+          maxWidth: '97%',
         }}
       >
         {resumeThemesArray.map((theme) => (

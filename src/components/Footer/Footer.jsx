@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-grid">
-                <div className="footer-column brand">
+                <div className="footer-column">
                     <Link to={'/'} style={{textDecoration: 'none'}}>
                         <h2><img src={logo} alt="Logo" className="logo" /> AI Resume Builder</h2>
                     </Link>

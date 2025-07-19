@@ -194,13 +194,6 @@ const MyResumesTab = () => {
 
             <h1 className='tabs-heading'>My Resumes</h1>
             <div className="resumes-list">
-                {/* Always render Create Resume Card */}
-                <div className="create-resume-card" onClick={handleCreateResumeClick}>
-                    <div className="create-resume-content">
-                        <i className="fa-solid fa-plus plus-icon" style={{ fontSize: '40px' }}></i>
-                        <p className='text'>Create New Resume</p>
-                    </div>
-                </div>
 
                 {/* Render resumes if available */}
                 {resumes && resumes.length > 0 ? (
@@ -221,7 +214,7 @@ const MyResumesTab = () => {
                                             backgroundColor: isDownloading ? "#6c757d" : "rgb(2, 98, 169)",
                                         }}
                                         className="resume-options-btn" onClick={() => handleDownload(resume)}>
-                                        <i className="fa-solid fa-download icon"/>
+                                        <i className="fa-solid fa-download icon" />
                                         {isDownloading ? " Generating..." : " Download"}
                                     </button>
 
@@ -244,6 +237,15 @@ const MyResumesTab = () => {
                 ) : (
                     <p></p>
                 )}
+
+                {/* Always render Create Resume Card */}
+                <div className="create-resume-card" onClick={handleCreateResumeClick}>
+                    <div className="create-resume-content">
+                        <i className="fa-solid fa-plus plus-icon" style={{ fontSize: '40px' }}></i>
+                        <p className='text'>Create New Resume</p>
+                    </div>
+                </div>
+
                 {showModal && (
                     <ConfirmModal
                         title="Delete Resume !"
