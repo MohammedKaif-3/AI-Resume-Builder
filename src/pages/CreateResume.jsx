@@ -19,9 +19,21 @@ const CreateResume = () => {
   const [newSectionTitle, setNewSectionTitle] = useState("");
   const [newSectionType, setNewSectionType] = useState("simple");
 
-  const [showForm, setShowForm] = useState(false);
-  const isMobile = window.innerWidth <= 768;
+  const [showForm, setShowForm] = useState(true);
 
+  const useIsMobile = () => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth <= 768);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return isMobile;
+  };
+
+  const isMobile = useIsMobile();
 
   const [techInput, setTechInput] = useState('');
 
@@ -428,7 +440,7 @@ const CreateResume = () => {
             </>
           )}
 
-          {!showForm && (
+          {(!showForm ||  !isMobile) && (
             <>
               <div className='res-header'>
                 <ResumeDownloader template={template} resumeData={resumeData} setResumeData={setResumeData} />
@@ -464,7 +476,7 @@ const CreateResume = () => {
                     </div>
                   )}
                 </div>
-                
+
                 {isMobile && (
                   <button
                     onClick={() => setShowForm(!showForm)}
@@ -484,7 +496,6 @@ const CreateResume = () => {
                   </button>
                 )}
               </div>
-
             </>
           )}
 
@@ -1008,7 +1019,7 @@ const CreateResume = () => {
 
                   {/* Simple section type */}
                   {section.type === "simple" && Object.entries(section.items).map(([key, item]) => (
-                    <div key={key} style={{display: 'flex', justifyContent:'center', alignItems: 'center'}}>
+                    <div key={key} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                       <input
                         value={item || ""}
                         onChange={e => updateItem(section.id, key, e.target.value)}

@@ -374,17 +374,17 @@ const SelectTemplate = () => {
   const templates = [
     { id: "wp-1col-tem1", component: Template_1, resumeData: resumeData },
     { id: "p-2col-tem1", component: Template_2, resumeData: resumeData2 },
+    { id: "wp-1col-des-tem1", component: Template_9, resumeData: resumeData3 },
     { id: "wp-2col-tem1", component: Template_3, resumeData: resumeData3 },
+    { id: "wp-2col-des-tem4", component: Template_12, resumeData: resumeData3 },
     { id: "wp-2col-tem2", component: Template_4, resumeData: resumeData },
-    { id: "p-2col-tem2", component: Template_5, resumeData: resumeData2 },
     { id: "p-1col-tem1", component: Template_6, resumeData: resumeData3 },
     { id: "wp-1col-tem2", component: Template_7, resumeData: resumeData },
     { id: "p-1col-tem2", component: Template_8, resumeData: resumeData2 },
-    { id: "wp-1col-des-tem1", component: Template_9, resumeData: resumeData3 },
     { id: "p-2col-des-tem2", component: Template_10, resumeData: resumeData },
     { id: "p-2col-des-tem3", component: Template_11, resumeData: resumeData2 },
-    { id: "wp-2col-des-tem4", component: Template_12, resumeData: resumeData3 },
-    { id: "wp-2col-des-tem5", component: Template_13, resumeData: resumeData }
+    { id: "wp-2col-des-tem5", component: Template_13, resumeData: resumeData },
+    { id: "p-2col-tem2", component: Template_5, resumeData: resumeData2 }
   ];
 
   const useSafeNavigate = () => {
