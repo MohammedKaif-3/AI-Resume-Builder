@@ -52,7 +52,7 @@
 }
 
 .icon {
-  font-size: 35px !important;
+  font-size: 30px !important;
   color: white;
 }
 
@@ -108,7 +108,7 @@
   width: 794px;
   /* A4 width */
   height: 1123px;
-  border: 2px dashed #ccc;
+  border: 0.3rem dashed #ccc;
   background-color: #f9f9f9;
   color: #666;
   cursor: pointer;
@@ -126,12 +126,12 @@
 }
 
 .plus-icon {
-  font-size: 25px !important;
+  font-size: 50px !important;
   margin-bottom: 0.5rem;
 }
 
 .text {
-  font-size: 0.7rem;
+  font-size: 1.5rem;
 }
 
 /* ✅ RESPONSIVE ZOOM ADJUSTMENTS */
@@ -158,6 +158,10 @@
   .resume-card {
     zoom: 0.3;
   }
+
+  .icon{
+    font-size: 25px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -168,6 +172,10 @@
   .create-resume-card,
   .resume-card {
     zoom: 0.3;
+  }
+
+  .icon{
+    font-size: 25px;
   }
 
 }
