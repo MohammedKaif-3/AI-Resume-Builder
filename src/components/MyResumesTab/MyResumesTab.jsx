@@ -213,27 +213,32 @@ const MyResumesTab = () => {
                                         Edit
                                     </button>
 
-                                    <button
-                                        disabled={isDownloading}
-                                        style={{
-                                            cursor: isDownloading ? "not-allowed" : "pointer",
-                                            backgroundColor: isDownloading ? "#6c757d" : "rgb(2, 98, 169)",
-                                        }}
-                                        className="resume-options-btn" onClick={() => handleDownload(resume)}>
-                                        <i className="fa-solid fa-download icon" />
-                                        {isDownloading ? " Generating..." : " Download"}
-                                    </button>
+                                    <div className='resume-actions-strip'>
 
-                                    <button
-                                        disabled={isDeleting}
-                                        style={{
-                                            cursor: isDeleting ? "not-allowed" : "pointer",
-                                            backgroundColor: isDeleting ? "#6c757d" : "rgb(2, 98, 169)",
-                                        }}
-                                        className="resume-options-btn" onClick={() => handleDeleteClick(resume._id)}>
-                                        <i className="fa-solid fa-trash icon" />
-                                        {isDeleting ? "Deleting..." : " Delete"}
-                                    </button>
+                                        <button
+                                            disabled={isDownloading}
+                                            style={{
+                                                cursor: isDownloading ? "not-allowed" : "pointer",
+                                                backgroundColor: isDownloading ? "#6c757d" : "rgb(2, 98, 169)",
+                                            }}
+                                            className="resume-action" onClick={() => handleDownload(resume)}>
+                                            <i className="fa-solid fa-download icon" />
+                                            {isDownloading ? " Generating..." : " Download"}
+                                        </button>
+
+                                        <button
+                                            disabled={isDeleting}
+                                            style={{
+                                                cursor: isDeleting ? "not-allowed" : "pointer",
+                                                backgroundColor: isDeleting ? "#6c757d" : "rgb(2, 98, 169)",
+                                            }}
+                                            className="resume-action" onClick={() => handleDeleteClick(resume._id)}>
+                                            <i className="fa-solid fa-trash icon" />
+                                            {isDeleting ? "Deleting..." : " Delete"}
+                                        </button>
+                                    </div>
+
+
                                 </div>
                             </div>
                             <div className="filename">{resume.filename} <span style={{ color: '#aaa' }}>.pdf</span> </div>
