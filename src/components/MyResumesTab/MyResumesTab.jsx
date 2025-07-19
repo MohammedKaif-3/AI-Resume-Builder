@@ -210,7 +210,7 @@ const MyResumesTab = () => {
                                         className="resume-action"
                                         onClick={() => openResumeInEditor(resume)}
                                     >
-                                        Edit
+                                        <i className="fa-solid fa-file-pen icon"></i> Edit
                                     </button>
 
                                     <div className='resume-actions-strip'>
