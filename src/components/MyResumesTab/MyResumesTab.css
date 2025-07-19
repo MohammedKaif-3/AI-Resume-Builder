@@ -143,8 +143,7 @@
   align-items: center;
   justify-content: center;
   cursor: default;
-  width: 215px;
-  text-wrap: wrap;
+  text-align: center;
   text-overflow: ellipsis;
   box-sizing: border-box;
   padding: 8px;

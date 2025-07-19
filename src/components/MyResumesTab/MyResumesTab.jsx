@@ -212,9 +212,7 @@ const MyResumesTab = () => {
                                     >
                                         Edit
                                     </button>
-                                </div>
 
-                                {/* <div className="resume-options" onClick={(e) => e.stopPropagation()}>
                                     <button
                                         disabled={isDownloading}
                                         style={{
@@ -236,8 +234,7 @@ const MyResumesTab = () => {
                                         <i className="fa-solid fa-trash icon" />
                                         {isDeleting ? "Deleting..." : " Delete"}
                                     </button>
-
-                                </div> */}
+                                </div>
                             </div>
                             <div className="filename">{resume.filename} <span style={{ color: '#aaa' }}>.pdf</span> </div>
                         </div>
@@ -247,22 +244,22 @@ const MyResumesTab = () => {
                 )}
 
                 {/* Always render Create Resume Card */}
-                <div className="create-resume-card" onClick={handleCreateResumeClick}>
+                {/* <div className="create-resume-card" onClick={handleCreateResumeClick}>
                     <div className="create-resume-content">
                         <i className="fa-solid fa-plus plus-icon" style={{ fontSize: '40px' }}></i>
                         <p className='text'>Create New Resume</p>
                     </div>
-                </div>
+                </div> */}
 
-                {showModal && (
-                    <ConfirmModal
-                        title="Delete Resume !"
-                        message="You can't undo this process. Are you sure?"
-                        onCancel={handleCancel}
-                        onConfirm={deleteConfirm}
-                    />
-                )}
             </div>
+            {showModal && (
+                <ConfirmModal
+                    title="Delete Resume !"
+                    message="You can't undo this process. Are you sure?"
+                    onCancel={handleCancel}
+                    onConfirm={deleteConfirm}
+                />
+            )}
         </div>
     );
 
