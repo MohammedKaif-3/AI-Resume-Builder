@@ -219,7 +219,7 @@ const MyResumesTab = () => {
                                             disabled={isDownloading}
                                             style={{
                                                 cursor: isDownloading ? "not-allowed" : "pointer",
-                                                backgroundColor: isDownloading ? "#6c757d" : "rgb(2, 98, 169)",
+                                                backgroundColor: isDownloading ? "#6c757d" : "#1a91f0",
                                             }}
                                             className="resume-action" onClick={() => handleDownload(resume)}>
                                             <i className="fa-solid fa-download icon" />
@@ -230,7 +230,7 @@ const MyResumesTab = () => {
                                             disabled={isDeleting}
                                             style={{
                                                 cursor: isDeleting ? "not-allowed" : "pointer",
-                                                backgroundColor: isDeleting ? "#6c757d" : "rgb(2, 98, 169)",
+                                                backgroundColor: isDeleting ? "#6c757d" : "#1a91f0",
                                             }}
                                             className="resume-action" onClick={() => handleDeleteClick(resume._id)}>
                                             <i className="fa-solid fa-trash icon" />

@@ -9,7 +9,6 @@
   overflow-y: auto;
 }
 
-
 .resume-card {
   zoom: 0.35;
   width: fit-content;
@@ -49,7 +48,7 @@
   background-color: #1a91f0;
   color: white;
   padding: 20px 40px;
-  border-radius: 4px;
+  border-radius: 5px;
   border: none;
   font-size: 35px;
   font-family: 'Poppins', sans-serif;
@@ -154,24 +153,9 @@
     height: 225px;
   }
 
-  .filename {
-    font-size: 11px;
-    width: 180px;
-  }
-
 }
 
 @media (max-width: 768px) {
-  .resumes-list {
-    justify-content: center;
-    gap: 20px;
-    padding: 10px;
-  }
-
-  .filename {
-    width: 160px;
-    font-size: 10px;
-  }
 
   .tabs-heading {
     font-size: 1.2rem !important;
@@ -187,11 +171,6 @@
 }
 
 @media (max-width: 480px) {
-
-  .filename {
-    font-size: 9.5px;
-    width: 140px;
-  }
 
   .tabs-heading {
     font-size: 1rem !important;
