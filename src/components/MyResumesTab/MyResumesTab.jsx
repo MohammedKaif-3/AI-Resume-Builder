@@ -205,9 +205,9 @@ const MyResumesTab = () => {
                             >
                                 <Resume template={resume.template} resumeData={resume} />
 
-                                <div className="template-overlay">
+                                <div className="resume-overlay">
                                     <button
-                                        className="template-action"
+                                        className="resume-action"
                                         onClick={() => openResumeInEditor(resume)}
                                     >
                                         Edit
