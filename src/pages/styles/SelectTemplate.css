@@ -6,7 +6,7 @@
 .templates-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
   padding: 20px 30px;
   justify-content: center;
   align-items: center;
