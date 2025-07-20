@@ -96,7 +96,7 @@
 /* Extra small screens */
 @media (max-width: 480px) {
   .score-box-live {
-    top: 60px;
+    top: 50%;
     left: 0;
     right: 0;
     max-width: 90%;
