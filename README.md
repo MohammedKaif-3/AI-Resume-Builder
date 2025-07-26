@@ -1,12 +1,46 @@
-# React + Vite
+# <img src="https://ai-resume-builder-six-nu.vercel.app/logo.png" height="40" style="border-radius: 8px;" /> AI Resume Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A smart, modern, and responsive **AI-powered Resume Builder** that helps users create polished resumes using structured data extraction, customizable templates, and intelligent resume scoring. Built with the **MERN stack**, it leverages advanced NLP techniques and LLMs to deliver professional, ATS-compliant resumes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+👉 [Visit AI Resume Builder Live](https://ai-resume-builder-six-nu.vercel.app/)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Features
+
+- 🧠 AI-Powered Resume Parsing (PDF/DOCX to JSON)
+- 🧩 Dynamic Resume Template Engine (Multiple Layouts)
+- 📊 Smart Resume Scoring (ATS Check, Content Quality, NLP insights)
+- ✍️ Supports Custom Sections (e.g., Certifications, Awards, etc.)
+- 💡 NLP Insights: Action Verbs, Measurable Achievements, Passive Voice
+- 📥 One-click PDF Export
+- 🔍 Skill Categorization (Hard/Soft Skills)
+- 🧼 DOMPurify + Clean Rendering
+- 🌐 Fully Responsive Design
+
+---
+
+## ⚙️ Tech Stack
+
+- **Frontend**: React, Styled-Components
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **AI Models**: Gemini (Google), OpenAI
+- **Parsing Libraries**: `mammoth`, `jspdf`
+- **PDF Export**: `react-to-pdf`, Puppeteer
+- **Resume Scoring**: Custom NLP, semantic scoring, ATS compliance checker
+
+---
+
+## 👤 Author
+
+Made with 💙 by **Mohammed Kaif**
+
+- [mohammedzaif61@gmail.com](mailto:mohammedzaif61@gmail.com)  
+- [LinkedIn](https://www.linkedin.com/in/mohammedkaif003)  
+
+<br/>
