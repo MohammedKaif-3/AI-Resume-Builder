@@ -1,5 +1,5 @@
 import "./HeroSection.css";
-import img from "../../assets/transparent_logo.png";
+import img from "../../assets/sample.png";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {

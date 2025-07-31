@@ -84,7 +84,7 @@
 }
 
 .hero-image img {
-  width: 350px;
+  width: 35vw;
   height: auto;
 }
 
@@ -119,7 +119,7 @@
   }
 
   .hero-image img {
-    width: 70%;
+    width: 100%;
     max-width: 280px;
   }
 }
@@ -134,7 +134,7 @@
   }
 
   .hero-image img {
-    width: 85%;
+    width: 100%;
     max-width: 240px;
   }
 }
