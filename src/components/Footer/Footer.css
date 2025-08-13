@@ -87,10 +87,15 @@
   padding: 3px;
 }
 
-.footer-bottom p span {
+.footer-bottom p a {
+  text-decoration: none;
   color: #4e4e4e;
   font-weight: 600;
   font-style: bold;
+}
+
+.footer-bottom p a:hover{
+  color: #1a91f0;
 }
 
 /* ✅ Responsive adjustments */

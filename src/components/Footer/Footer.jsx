@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <p><i className="fa-solid fa-heart"></i> Developed by <span>Mohammed Kaif</span></p>
+                <p><i className="fa-solid fa-heart"></i> Developed by <a href="https://mohammedkaif-3.github.io/Portfolio/" target="blank">Mohammed Kaif</a></p>
                 <p>© {new Date().getFullYear()} AI Resume Builder. All rights reserved.</p>
             </div>
         </footer>
